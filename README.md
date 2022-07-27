@@ -206,3 +206,31 @@ Değişmesi muhtemel olmayan değerleriniz olduğunda, değişkeni her zaman sab
 Örnek
 const int minutesPerHour = 60;
 const float PI = 3.14;
+
+ ## C++ Kullanıcı Girişi
+cout Değerleri çıktılamak (yazdırmak) için kullanıldığını zaten öğrendiniz.
+Şimdi kullanıcı girdisi almak için cin kullanacağız.
+cin çıkarma operatörü ( >> ) ile klavyeden veri okuyan önceden tanımlanmış bir değişkendir.
+Aşağıdaki örnekte, kullanıcı x  değişkende saklanan bir sayı girebilir. Sonra  
+x değerini yazdırıyoruz:
+Örnek
+int x; 
+cout << "Type a number: "; // Bir numara yazın ve enter tuşuna basın
+cin >> x; // Klavyeden kullanıcı girişi alın
+cout << "Your number is: " << x; // Giriş değerini görüntüleme
+
+
+* cout "dışarı bak/görmek" olarak telaffuz edilir. Çıktı için kullanılır ve (<<) ekleme operatörünü kullanır.
+* cin "içeri bak/görmek" olarak telaffuz edilir. Giriş için kullanılır ve (>>) çıkarma operatörünü kullanır.
+
+Basit Bir Hesap Makinesi Oluşturma
+Bu örnekte, kullanıcı iki sayı girmelidir. Sonra iki sayıyı hesaplayarak (toplayarak) toplamı yazdırırız:
+Örnek
+int x, y;
+int sum;
+cout << "Type a number: ";
+cin >> x;
+cout << "Type another number: ";
+cin >> y;
+sum = x + y;
+cout << "Sum is: " << sum;
