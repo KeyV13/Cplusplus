@@ -97,3 +97,112 @@ Kaçış dizisi	Tanım
 \\	Bir ters eğik çizgi karakteri (\) ekler	
 \"	Çift tırnak karakteri ekler	
 
+## C++ Değişkenleri || Variables
+
+Değişkenler, veri değerlerini depolamak için kapsayıcılardır.
+C++'da farklı türde değişkenler vardır (farklı anahtar sözcüklerle tanımlanır), örneğin:
+  
+•	integer- 123 veya -123 gibi tam sayıları ondalık olmadan saklar Kullanılan sayıların boyutuna göre int (4bayt) short int (2 bayt) veya 
+  long int (8 bayt) kullanılarak tanımlanır.
+•	kesirli sayılar- 19.99 veya -19,99 gibi ondalık sayılarla kayan noktalı sayıları saklar- gerçek sayılar (kesirli sayılar). Float ve double kullanılarak tanımlanır.
+•	char- 'a' veya 'B' gibi tek karakterleri saklar. Karakter değerleri tek tırnak içine alınır
+•	string- "Merhaba Dünya" gibi metinleri saklar. Dize değerleri çift tırnak içine alınır
+•	boolean- değerleri iki durumla saklar: true(doğru) veya false(yanlış)
+•	Void anahtar sözcüğünü kullanarak değeri olmayan
+•	Wchar_t anahtar sözcüğünü kullanarak geniş karakter kullanılır
+•	Yukarıdaki türler signed ve unsigned short ve long değiştiricileri kullanılarak değiştirilebilir.
+  
+### Değişkenleri Bildirme (Oluşturma)
+  
+Bir değişken oluşturmak için türü belirtin ve ona bir değer atayın:
+  
+Sözdizimi
+type variableName = value;
+  
+Burada tür , C++ türlerinden biridir (örneğin int) ve değişkenAdı , değişkenin adıdır (örneğin, x veya myName ). Değişkene değer atamak için eşittir işareti kullanılır.
+Bir sayı saklaması gereken bir değişken oluşturmak için aşağıdaki örneğe bakın:
+Örnek
+myNum türünde bir değişken oluşturun ve ona 15 int değerini atayın :
+int myNum = 15;
+cout << myNum;
+  
+Ayrıca değeri atamadan bir değişken bildirebilir ve değeri daha sonra atayabilirsiniz:
+Örnek
+int myNum;
+myNum = 15;
+cout << myNum;
+  
+Mevcut bir değişkene yeni bir değer atarsanız, önceki değerin üzerine yazacağını unutmayın:
+Örnek
+int myNum = 15;  // myNum is 15
+myNum = 10;  // Now myNum is 10
+cout << myNum;  // Outputs 10
+  
+Diğer çeşitler
+Diğer veri türlerinin bir gösterimi:
+Örnek
+int myNum = 5;               // Tamsayı (ondalık olmayan tam sayı)
+double myFloatNum = 5.99;    // Kayan nokta sayısı (ondalıklı)
+char myLetter = 'D';         // Karakter
+string myText = "Hello";     // String (metin)
+bool myBoolean = true;       // Boolean (doğru veya yanlış)
+Veri Tipleri bölümünde ayrı tipler hakkında daha fazla bilgi edineceksiniz.
+
+### Değişkenleri Görüntüle
+  
+Nesne cout, değişkenleri görüntülemek için << operatörle birlikte kullanılır.
+Hem metni hem de değişkeni birleştirmek için bunları << operatörle ayırın:
+Örnek
+int myAge = 35;
+cout << "I am " << myAge << " years old.";
+  
+### Değişkenleri Birlikte Ekle
+Başka bir değişkene değişken eklemek için + operatörü kullanabilirsiniz:
+Örnek
+int x = 5;
+int y = 6;
+int sum = x + y;
+cout << sum;
+  
+### Birçok Değişken Bildirin
+Aynı türden birden fazla değişken bildirmek için virgülle ayrılmış bir liste kullanın:
+Örnek
+int x = 5, y = 6, z = 50;
+cout << x + y + z;
+  
+### Birden Çok Değişkene Bir Değer
+Aynı değeri bir satırda birden çok değişkene de atayabilirsiniz :
+Örnek
+int x, y, z;
+x = y = z = 50;
+cout << x + y + z;
+  
+### C++ Tanımlayıcıları
+  
+Tüm C ++ değişkenleri benzersiz adlarla tanımlanmalıdır.
+Bu benzersiz adlara tanımlayıcılar denir.
+Tanımlayıcılar kısa adlar (x ve y gibi) veya daha açıklayıcı adlar (yaş, toplam, toplam Hacim) olabilir.
+Not: Anlaşılır ve bakımı kolay kod oluşturmak için açıklayıcı adların kullanılması önerilir:
+Örnek
+// İyi
+int minutesPerHour = 60;
+
+// Tamam, ama m'nin gerçekte ne olduğunu anlamak o kadar kolay değil
+int m = 60;
+Değişkenleri adlandırmak için genel kurallar şunlardır:
+•	İsimler harf, rakam ve alt çizgi içerebilir
+•	İsimler bir harf veya alt çizgi (_) ile başlamalıdır
+•	Adlar büyük/küçük harfe duyarlıdır ( myVar ve myvar farklı değişkenlerdir)
+•	Adlar boşluk veya !, #, %, vb. gibi özel karakterler içeremez.
+•	Ayrılmış sözcükler (örneğin, C++ anahtar sözcükleri gibi int) ad olarak kullanılamaz
+  
+## Sabitler || Constants
+  
+Başkalarının (veya kendinizin) mevcut değişken değerlerini geçersiz kılmasını istemiyorsanız, const anahtar kelimeyi kullanın (bu, değişkeni "sabit" olarak bildirir, bu da değiştirilemez ve salt okunur anlamına gelir):
+Örnek
+const int myNum = 15;  // myNum her zaman 15 yaşında olacak
+myNum = 10;  // hata: salt okunur değişken 'myNum' atama
+Değişmesi muhtemel olmayan değerleriniz olduğunda, değişkeni her zaman sabit olarak bildirmelisiniz:
+Örnek
+const int minutesPerHour = 60;
+const float PI = 3.14;
