@@ -99,6 +99,7 @@ Kaçış dizisi	Tanım
 
 ## C++ Değişkenleri || Variables
 
+
 Değişkenler, veri değerlerini depolamak için kapsayıcılardır.
 C++'da farklı türde değişkenler vardır (farklı anahtar sözcüklerle tanımlanır), örneğin:
   
@@ -120,62 +121,27 @@ Sözdizimi
 type variableName = value;
   
 Burada tür , C++ türlerinden biridir (örneğin int) ve değişkenAdı , değişkenin adıdır (örneğin, x veya myName ). Değişkene değer atamak için eşittir işareti kullanılır.
-Bir sayı saklaması gereken bir değişken oluşturmak için aşağıdaki örneğe bakın:
-Örnek
-myNum türünde bir değişken oluşturun ve ona 15 int değerini atayın :
-int myNum = 15;
-cout << myNum;
-  
-Ayrıca değeri atamadan bir değişken bildirebilir ve değeri daha sonra atayabilirsiniz:
-Örnek
-int myNum;
-myNum = 15;
-cout << myNum;
-  
-Mevcut bir değişkene yeni bir değer atarsanız, önceki değerin üzerine yazacağını unutmayın:
-Örnek
-int myNum = 15;  // myNum is 15
-myNum = 10;  // Now myNum is 10
-cout << myNum;  // Outputs 10
-  
-Diğer çeşitler
-Diğer veri türlerinin bir gösterimi:
-Örnek
-int myNum = 5;               // Tamsayı (ondalık olmayan tam sayı)
-double myFloatNum = 5.99;    // Kayan nokta sayısı (ondalıklı)
-char myLetter = 'D';         // Karakter
-string myText = "Hello";     // String (metin)
-bool myBoolean = true;       // Boolean (doğru veya yanlış)
-Veri Tipleri bölümünde ayrı tipler hakkında daha fazla bilgi edineceksiniz.
 
-### Değişkenleri Görüntüle
-  
+Bir sayı saklaması gereken bir değişken oluşturmak için Variables_Degiskenler02prg örneğe bakın:
+Ayrıca değeri atamadan bir değişken bildirebilir ve değeri daha sonra atayabilirsiniz:
+Mevcut bir değişkene yeni bir değer atarsanız, önceki değerin üzerine yazacağını unutmayın:
+
+
+### Değişkenleri Görüntüle 
 Nesne cout, değişkenleri görüntülemek için << operatörle birlikte kullanılır.
 Hem metni hem de değişkeni birleştirmek için bunları << operatörle ayırın:
-Örnek
-int myAge = 35;
-cout << "I am " << myAge << " years old.";
+
   
 ### Değişkenleri Birlikte Ekle
 Başka bir değişkene değişken eklemek için + operatörü kullanabilirsiniz:
-Örnek
-int x = 5;
-int y = 6;
-int sum = x + y;
-cout << sum;
   
 ### Birçok Değişken Bildirin
 Aynı türden birden fazla değişken bildirmek için virgülle ayrılmış bir liste kullanın:
-Örnek
-int x = 5, y = 6, z = 50;
-cout << x + y + z;
+
   
 ### Birden Çok Değişkene Bir Değer
 Aynı değeri bir satırda birden çok değişkene de atayabilirsiniz :
-Örnek
-int x, y, z;
-x = y = z = 50;
-cout << x + y + z;
+
   
 ### C++ Tanımlayıcıları
   
@@ -183,13 +149,10 @@ Tüm C ++ değişkenleri benzersiz adlarla tanımlanmalıdır.
 Bu benzersiz adlara tanımlayıcılar denir.
 Tanımlayıcılar kısa adlar (x ve y gibi) veya daha açıklayıcı adlar (yaş, toplam, toplam Hacim) olabilir.
 Not: Anlaşılır ve bakımı kolay kod oluşturmak için açıklayıcı adların kullanılması önerilir:
-Örnek
-// İyi
-int minutesPerHour = 60;
 
-// Tamam, ama m'nin gerçekte ne olduğunu anlamak o kadar kolay değil
-int m = 60;
+
 Değişkenleri adlandırmak için genel kurallar şunlardır:
+
 •	İsimler harf, rakam ve alt çizgi içerebilir
 •	İsimler bir harf veya alt çizgi (_) ile başlamalıdır
 •	Adlar büyük/küçük harfe duyarlıdır ( myVar ve myvar farklı değişkenlerdir)
@@ -199,38 +162,79 @@ Değişkenleri adlandırmak için genel kurallar şunlardır:
 ## Sabitler || Constants
   
 Başkalarının (veya kendinizin) mevcut değişken değerlerini geçersiz kılmasını istemiyorsanız, const anahtar kelimeyi kullanın (bu, değişkeni "sabit" olarak bildirir, bu da değiştirilemez ve salt okunur anlamına gelir):
-Örnek
-const int myNum = 15;  // myNum her zaman 15 yaşında olacak
-myNum = 10;  // hata: salt okunur değişken 'myNum' atama
+
 Değişmesi muhtemel olmayan değerleriniz olduğunda, değişkeni her zaman sabit olarak bildirmelisiniz:
-Örnek
-const int minutesPerHour = 60;
-const float PI = 3.14;
+
 
  ## C++ Kullanıcı Girişi
+ 
 cout Değerleri çıktılamak (yazdırmak) için kullanıldığını zaten öğrendiniz.
 Şimdi kullanıcı girdisi almak için cin kullanacağız.
 cin çıkarma operatörü ( >> ) ile klavyeden veri okuyan önceden tanımlanmış bir değişkendir.
 Aşağıdaki örnekte, kullanıcı x  değişkende saklanan bir sayı girebilir. Sonra  
 x değerini yazdırıyoruz:
-Örnek
-int x; 
-cout << "Type a number: "; // Bir numara yazın ve enter tuşuna basın
-cin >> x; // Klavyeden kullanıcı girişi alın
-cout << "Your number is: " << x; // Giriş değerini görüntüleme
 
 
 * cout "dışarı bak/görmek" olarak telaffuz edilir. Çıktı için kullanılır ve (<<) ekleme operatörünü kullanır.
 * cin "içeri bak/görmek" olarak telaffuz edilir. Giriş için kullanılır ve (>>) çıkarma operatörünü kullanır.
 
-Basit Bir Hesap Makinesi Oluşturma
-Bu örnekte, kullanıcı iki sayı girmelidir. Sonra iki sayıyı hesaplayarak (toplayarak) toplamı yazdırırız:
-Örnek
-int x, y;
-int sum;
-cout << "Type a number: ";
-cin >> x;
-cout << "Type another number: ";
-cin >> y;
-sum = x + y;
-cout << "Sum is: " << sum;
+##C++ Veri Türleri
+
+C++'daki veri türleri temel olarak üç türe ayrılır:
+
+### 1. Temel Veri Türleri : Bu veri türleri yerleşik veya önceden tanımlanmış veri türleridir ve değişkenleri bildirmek için doğrudan kullanıcı tarafından kullanılabilir. örnek: int, char, float, bool, vb. C++'da bulunan ilkel veri türleri şunlardır: 
+•	Integer     (Tamsayı)
+•	Character  (karekter)
+•	Boolean   (Boole)
+•	Floating Point ( Kayan Nokta)
+•	Double Floating Point (Çift Kayan Nokta)
+•	Valueless or Void (Değersiz veya Void)
+•	Wide Character (Geniş Karakter)
+
+### 2. Türetilmiş Veri Türleri: İlkel veya yerleşik veri türlerinden türetilen veri türleri, Türetilmiş Veri Türleri olarak adlandırılır. Bunlar dört tip olabilir: 
+•	Function (fonksiyon)
+•	Array       (Dizi)
+•	Pointer     (İşaretçi,Katar)
+•	Reference  (Referans)
+
+### 3. Özet/Soyut veya Kullanıcı Tanımlı Veri Tipleri
+•	Class (Sınıf)
+•	Structure (Yapı)
+•	Union  (Birlik)
+•	Enumeration (Numaralandırma)
+•	Typedef defined Datatype (Typedef tanımlı Veri Türü)
+
+Değişkenler bölümünde açıklandığı gibi, C++'daki bir değişken belirtilen bir veri tipi olmalıdır:
+
+### Temel Veri Tipleri
+Veri türü, değişkenin depolayacağı bilgilerin boyutunu ve türünü belirtir:
+•	Integer : Tamsayı veri türleri için kullanılan anahtar sözcük int'dir . Tamsayılar tipik olarak 4 bayt bellek alanı gerektirir ve -2147483648 ile 2147483647 arasında değişir.  
+•	Character : Karakter veri tipi karakterleri saklamak için kullanılır. Karakter veri türü için kullanılan anahtar kelime char'dır . Karakterler tipik olarak 1 bayt bellek alanı gerektirir ve -128 ile 127 veya 0 ile 255 arasında değişir.  
+•	Boolean : Boolean veri türü, Boolean veya mantıksal değerleri depolamak için kullanılır. Bir Boolean değişkeni, true veya false depolayabilir . Boolean veri türü için kullanılan anahtar sözcük bool'dur . 
+•	Floating Poin: Kayan Nokta veri türü, tek duyarlıklı kayan noktalı değerleri veya ondalık değerleri depolamak için kullanılır. Kayan noktalı veri türü için kullanılan anahtar sözcük float'tır . Kayan değişkenler tipik olarak 4 bayt bellek alanı gerektirir. 
+•	Double Floating Point: Çift Kayan Nokta veri türü, çift duyarlıklı kayan nokta değerlerini veya ondalık değerleri depolamak için kullanılır. Çift kayan noktalı veri türü için kullanılan anahtar sözcük double'dır . Çift değişkenler tipik olarak 8 bayt bellek alanı gerektirir. 
+•	void : Void değeri olmayan anlamına gelir. void veri türü değersiz bir varlığı temsil eder. Değer döndürmeyen işlevler için void veri türü kullanılır. 
+•	Geniş Karakter : Geniş karakter veri türü de bir karakter veri türüdür ancak bu veri türü normal 8 bitlik veri türünden daha büyük bir boyuta sahiptir. wchar_t tarafından temsil edilir. Genellikle 2 veya 4 bayt uzunluğundadır.
+
+Sonraki bölümlerde bireysel veri türleri hakkında daha fazla bilgi edineceksiniz.
+
+### Sayısal Türler
+İnt 35 veya 1000 gibi bir tam sayıyı ondalık olmadan saklamanız gerektiğinde ve float veya double 9.99 veya 3.14515 gibi kayan noktalı bir sayıya (ondalıklı) ihtiyacınız olduğunda kullanın.
+
+
+float vs .double
+Kayan nokta değerinin kesinliği, değerin ondalık noktadan sonra kaç basamağa sahip olabileceğini gösterir. Kesinliği float yalnızca altı veya 
+yedi ondalık basamak iken double değişkenlerin kesinliği yaklaşık 15 basamaktır. Double Bu nedenle çoğu hesaplama için kullanmak daha güvenlidir.
+
+Bilimsel Sayılar
+Kayan noktalı sayı, 10'un gücünü belirtmek için "e" ile gösterilen bilimsel bir sayı da olabilir:
+
+### Boole Türleri
+Anahtar sözcükle bir boolean veri türü bildirilir bool ve yalnızca true(doğru) veya false (yanlış) değerlerini alabilir.
+Değer döndürüldüğünde, true = 1 ve false = 0.
+Boolean değerleri, daha sonraki bir bölümde daha fazlasını öğreneceğiniz koşullu test için çoğunlukla kullanılır.
+
+### Karakter Türleri
+Veri char türü, tek bir karakter depolamak için kullanılır. Karakter, 'A' veya 'c' gibi tek tırnak içine alınmalıdır:
+Alternatif olarak, belirli karakterleri görüntülemek için ASCII değerlerini kullanabilirsiniz:
+
