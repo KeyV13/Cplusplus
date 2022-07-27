@@ -178,11 +178,13 @@ x değerini yazdırıyoruz:
 * cout "dışarı bak/görmek" olarak telaffuz edilir. Çıktı için kullanılır ve (<<) ekleme operatörünü kullanır.
 * cin "içeri bak/görmek" olarak telaffuz edilir. Giriş için kullanılır ve (>>) çıkarma operatörünü kullanır.
 
-##C++ Veri Türleri
+## C++ Veri Türleri
 
 C++'daki veri türleri temel olarak üç türe ayrılır:
 
-### 1. Temel Veri Türleri : Bu veri türleri yerleşik veya önceden tanımlanmış veri türleridir ve değişkenleri bildirmek için doğrudan kullanıcı tarafından kullanılabilir. örnek: int, char, float, bool, vb. C++'da bulunan ilkel veri türleri şunlardır: 
+### 1. Temel Veri Türleri : 
+Bu veri türleri yerleşik veya önceden tanımlanmış veri türleridir ve değişkenleri bildirmek için doğrudan kullanıcı tarafından kullanılabilir. 
+örnek: int, char, float, bool, vb. C++'da bulunan ilkel veri türleri şunlardır: 
 •	Integer     (Tamsayı)
 •	Character  (karekter)
 •	Boolean   (Boole)
@@ -191,7 +193,8 @@ C++'daki veri türleri temel olarak üç türe ayrılır:
 •	Valueless or Void (Değersiz veya Void)
 •	Wide Character (Geniş Karakter)
 
-### 2. Türetilmiş Veri Türleri: İlkel veya yerleşik veri türlerinden türetilen veri türleri, Türetilmiş Veri Türleri olarak adlandırılır. Bunlar dört tip olabilir: 
+### 2. Türetilmiş Veri Türleri: 
+İlkel veya yerleşik veri türlerinden türetilen veri türleri, Türetilmiş Veri Türleri olarak adlandırılır. Bunlar dört tip olabilir: 
 •	Function (fonksiyon)
 •	Array       (Dizi)
 •	Pointer     (İşaretçi,Katar)
