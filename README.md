@@ -241,3 +241,76 @@ Boolean değerleri, daha sonraki bir bölümde daha fazlasını öğreneceğiniz
 Veri char türü, tek bir karakter depolamak için kullanılır. Karakter, 'A' veya 'c' gibi tek tırnak içine alınmalıdır:
 Alternatif olarak, belirli karakterleri görüntülemek için ASCII değerlerini kullanabilirsiniz:
 
+## C++ Operatörleri
+  
+Operatörler, değişkenler ve değerler üzerinde işlem yapmak için kullanılır.
+Aşağıdaki örnekte, iki değeri bir araya getirmek için + operatörü kullanıyoruz:
+int x = 100 + 50;
+  
+C++, operatörleri aşağıdaki gruplara ayırır:
+1.	Aritmetik operatörler
+2.	İlişkisel Operatörler
+3.	Mantıksal operatörler
+4.	Bitsel Operatörler
+5.	Atama Operatörleri
+6.	Diğer Operatörler
+  
+  ### Aritmetik operatörler
+  
+Aritmetik operatörler, yaygın matematiksel işlemleri gerçekleştirmek için kullanılır.
+Bu operatörler, işlenenler üzerinde aritmetik/matematiksel işlemler gerçekleştirmek için kullanılır.
+  (+, -, *, /, %,++,--).
+  
+  ### Atama Operatörleri
+  
+Atama operatörleri, bir değişkene değer atamak için kullanılır. Atama operatörünün sol taraftaki işleneni bir değişkendir ve atama operatörünün sağ taraftaki işleneni bir değerdir. Sağ taraftaki değer, sol taraftaki değişken ile aynı veri tipinde olmalıdır, aksi takdirde derleyici hata verecektir. 
+Aşağıdaki örnekte, x adlı bir değişkene 10 değerini atamak için atama operatörünü ( = )  kullanıyoruz.
+  
+  ### Karşılaştırma Operatörleri
+  
+Karşılaştırma operatörleri iki değeri karşılaştırmak için kullanılır.
+Not: Bir karşılaştırmanın dönüş değeri doğru ( 1) veya yanlıştır ( 0).
+  
+  ### Mantıksal operatörler
+  
+Mantıksal operatörler, değişkenler veya değerler arasındaki mantığı belirlemek için kullanılır Bir mantıksal işlecin işleminin sonucu, true veya false bir Boolean değeridir
+  
+### Bitsel operatörler
+  
+Bitsel operatörler, işlenenler üzerinde bit düzeyinde işlemler gerçekleştirmek için kullanılır. Operatörler önce bit düzeyine dönüştürülür ve ardından işlenenler üzerinde hesaplama yapılır. Daha hızlı işlem için bit düzeyinde toplama, çıkarma, çarpma vb. matematiksel işlemler yapılabilir. Örneğin, C veya C++'da & operatörü olarak temsil edilen bitsel AND , işlenen olarak iki sayı alır ve iki sayının her bitinde AND yapar. AND'nin sonucu yalnızca her iki bit de 1 ise 1'dir
+  
+### Diğer operatörler: 
+  
+Yukarıdaki operatörlerin dışında, bazı özel görevleri gerçekleştirmek için kullanılan C veya C++'da bulunan başka operatörler de vardır. Bazıları burada tartışılmaktadır: 
+a. sizeof operatörü : 
+•	sizeof, C/C++ programlama dilinde çokça kullanılır.
+•	İşleneninin boyutunu hesaplamak için kullanılabilen bir derleme zamanı tekli operatörüdür.
+•	sizeof'un sonucu, genellikle size_t ile gösterilen işaretsiz integral tipindedir.
+•	Temel olarak, operatörün boyutu, değişkenin boyutunu hesaplamak için kullanılır. 
+
+b. Virgül Operatörü : 
+•	Virgül operatörü (belirteç tarafından temsil edilir), ilk işlenenini değerlendiren ve sonucu atan bir ikili operatördür, ardından ikinci işleneni değerlendirir ve bu değeri (ve türü) döndürür.
+•	Virgül operatörü, herhangi bir C operatörünün en düşük önceliğine sahiptir.
+•	Virgül hem operatör hem de ayırıcı görevi görür. 
+
+c. Koşullu Operatör : 
+•	Koşul operatörü, Expression1? biçimindedir. İfade2: İfade3 .
+•	Burada, İfade1 değerlendirilecek koşuldur. Eğer koşul(İfade1) True ise, o zaman çalıştıracağız ve İfade2'nin sonucunu döndüreceğiz, aksi halde koşul(İfade1) yanlış ise o zaman çalıştıracağız ve İfade3'ün sonucunu döndüreceğiz.
+•	if..else ifadelerinin kullanımını koşullu operatörlerle değiştirebiliriz. 
+
+
+d. nokta (.) ve ok (->) İşleçler:
+•	Üye operatörler, sınıfların, yapıların ve birliklerin bireysel üyelerine başvurmak için kullanılır.
+•	Nokta operatörü gerçek nesneye uygulanır
+•	Ok operatörü, bir nesnenin işaretçisiyle birlikte kullanılır
+
+e.  Cast Operatörü:
+•	Döküm operatörleri, bir veri türünü diğerine dönüştürür. Örneğin, int(2.2000) 2 döndürür.
+•	Döküm, bir veri türünü diğerine dönüştürülmeye zorlayan özel bir operatördür. 
+•	C++ derleyicilerinin çoğu tarafından desteklenen en genel döküm aşağıdaki gibidir -   [ (tür) ifadesi ] .
+
+f.  &,* Şebeke:
+•	İşaretçi operatörü & bir değişkenin adresini döndürür. Örneğin &a; değişkenin gerçek adresini verecektir.
+•	İşaretçi operatörü *, bir değişkenin işaretçisidir. Örneğin *var; bir var değişkenine işaret eder. 
+
+
