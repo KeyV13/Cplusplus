@@ -18,12 +18,10 @@ int main()
 
     cout << "\n\n";
 
-    string adim = "Nicola ";
-    string soyAdim = "Tesla";
-    string tamAdim = adim.append(soyAdim);
-    cout << tamAdim;
-
-    cout << "\n\n";
+    // string adim = "Nicola ";
+    // string soyAdim = "Tesla";
+    // string tamAdim = adim.append(soyAdim);
+    // cout << tamAdim;
 
     string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     cout << "Metin dizesinin uzunlugu: " << txt.length();  // veya txt.size():
