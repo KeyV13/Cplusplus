@@ -1,3 +1,0 @@
-test
-#syntax
-sözdizimi
