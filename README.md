@@ -113,7 +113,7 @@ C++'da farklı türde değişkenler vardır (farklı anahtar sözcüklerle tanı
 •	Wchar_t anahtar sözcüğünü kullanarak geniş karakter kullanılır
 •	Yukarıdaki türler signed ve unsigned short ve long değiştiricileri kullanılarak değiştirilebilir.
   
-### Değişkenleri Bildirme (Oluşturma)
+ Değişkenleri Bildirme (Oluşturma)
   
 Bir değişken oluşturmak için türü belirtin ve ona bir değer atayın:
   
@@ -127,23 +127,23 @@ Ayrıca değeri atamadan bir değişken bildirebilir ve değeri daha sonra ataya
 Mevcut bir değişkene yeni bir değer atarsanız, önceki değerin üzerine yazacağını unutmayın:
 
 
-### Değişkenleri Görüntüle 
+Değişkenleri Görüntüle 
 Nesne cout, değişkenleri görüntülemek için << operatörle birlikte kullanılır.
 Hem metni hem de değişkeni birleştirmek için bunları << operatörle ayırın:
 
   
-### Değişkenleri Birlikte Ekle
+ Değişkenleri Birlikte Ekle
 Başka bir değişkene değişken eklemek için + operatörü kullanabilirsiniz:
   
-### Birçok Değişken Bildirin
+ Birçok Değişken Bildirin
 Aynı türden birden fazla değişken bildirmek için virgülle ayrılmış bir liste kullanın:
 
   
-### Birden Çok Değişkene Bir Değer
+ Birden Çok Değişkene Bir Değer
 Aynı değeri bir satırda birden çok değişkene de atayabilirsiniz :
 
   
-### C++ Tanımlayıcıları
+ C++ Tanımlayıcıları
   
 Tüm C ++ değişkenleri benzersiz adlarla tanımlanmalıdır.
 Bu benzersiz adlara tanımlayıcılar denir.
@@ -159,7 +159,7 @@ Değişkenleri adlandırmak için genel kurallar şunlardır:
 •	Adlar boşluk veya !, #, %, vb. gibi özel karakterler içeremez.
 •	Ayrılmış sözcükler (örneğin, C++ anahtar sözcükleri gibi int) ad olarak kullanılamaz
   
-## Sabitler || Constants
+### Sabitler || Constants
   
 Başkalarının (veya kendinizin) mevcut değişken değerlerini geçersiz kılmasını istemiyorsanız, const anahtar kelimeyi kullanın (bu, değişkeni "sabit" olarak bildirir, bu da değiştirilemez ve salt okunur anlamına gelir):
 
@@ -182,7 +182,7 @@ x değerini yazdırıyoruz:
 
 C++'daki veri türleri temel olarak üç türe ayrılır:
 
-### 1. Temel Veri Türleri : 
+1. Temel Veri Türleri : 
 Bu veri türleri yerleşik veya önceden tanımlanmış veri türleridir ve değişkenleri bildirmek için doğrudan kullanıcı tarafından kullanılabilir. 
 örnek: int, char, float, bool, vb. C++'da bulunan ilkel veri türleri şunlardır: 
 •	Integer     (Tamsayı)
@@ -193,14 +193,14 @@ Bu veri türleri yerleşik veya önceden tanımlanmış veri türleridir ve değ
 •	Valueless or Void (Değersiz veya Void)
 •	Wide Character (Geniş Karakter)
 
-### 2. Türetilmiş Veri Türleri: 
+ 2. Türetilmiş Veri Türleri: 
 İlkel veya yerleşik veri türlerinden türetilen veri türleri, Türetilmiş Veri Türleri olarak adlandırılır. Bunlar dört tip olabilir: 
 •	Function (fonksiyon)
 •	Array       (Dizi)
 •	Pointer     (İşaretçi,Katar)
 •	Reference  (Referans)
 
-### 3. Özet/Soyut veya Kullanıcı Tanımlı Veri Tipleri
+ 3. Özet/Soyut veya Kullanıcı Tanımlı Veri Tipleri
 •	Class (Sınıf)
 •	Structure (Yapı)
 •	Union  (Birlik)
@@ -221,7 +221,7 @@ Veri türü, değişkenin depolayacağı bilgilerin boyutunu ve türünü belirt
 
 Sonraki bölümlerde bireysel veri türleri hakkında daha fazla bilgi edineceksiniz.
 
-### Sayısal Türler
+Sayısal Türler
 İnt 35 veya 1000 gibi bir tam sayıyı ondalık olmadan saklamanız gerektiğinde ve float veya double 9.99 veya 3.14515 gibi kayan noktalı bir sayıya (ondalıklı) ihtiyacınız olduğunda kullanın.
 
 
@@ -232,12 +232,12 @@ yedi ondalık basamak iken double değişkenlerin kesinliği yaklaşık 15 basam
 Bilimsel Sayılar
 Kayan noktalı sayı, 10'un gücünü belirtmek için "e" ile gösterilen bilimsel bir sayı da olabilir:
 
-### Boole Türleri
+Boole Türleri
 Anahtar sözcükle bir boolean veri türü bildirilir bool ve yalnızca true(doğru) veya false (yanlış) değerlerini alabilir.
 Değer döndürüldüğünde, true = 1 ve false = 0.
 Boolean değerleri, daha sonraki bir bölümde daha fazlasını öğreneceğiniz koşullu test için çoğunlukla kullanılır.
 
-### Karakter Türleri
+Karakter Türleri
 Veri char türü, tek bir karakter depolamak için kullanılır. Karakter, 'A' veya 'c' gibi tek tırnak içine alınmalıdır:
 Alternatif olarak, belirli karakterleri görüntülemek için ASCII değerlerini kullanabilirsiniz:
 
@@ -255,31 +255,31 @@ C++, operatörleri aşağıdaki gruplara ayırır:
 5.	Atama Operatörleri
 6.	Diğer Operatörler
   
-  ### Aritmetik operatörler
+  Aritmetik operatörler
   
 Aritmetik operatörler, yaygın matematiksel işlemleri gerçekleştirmek için kullanılır.
 Bu operatörler, işlenenler üzerinde aritmetik/matematiksel işlemler gerçekleştirmek için kullanılır.
   (+, -, *, /, %,++,--).
   
-  ### Atama Operatörleri
+  Atama Operatörleri
   
 Atama operatörleri, bir değişkene değer atamak için kullanılır. Atama operatörünün sol taraftaki işleneni bir değişkendir ve atama operatörünün sağ taraftaki işleneni bir değerdir. Sağ taraftaki değer, sol taraftaki değişken ile aynı veri tipinde olmalıdır, aksi takdirde derleyici hata verecektir. 
 Aşağıdaki örnekte, x adlı bir değişkene 10 değerini atamak için atama operatörünü ( = )  kullanıyoruz.
   
-  ### Karşılaştırma Operatörleri
+   Karşılaştırma Operatörleri
   
 Karşılaştırma operatörleri iki değeri karşılaştırmak için kullanılır.
 Not: Bir karşılaştırmanın dönüş değeri doğru ( 1) veya yanlıştır ( 0).
   
-  ### Mantıksal operatörler
+   Mantıksal operatörler
   
 Mantıksal operatörler, değişkenler veya değerler arasındaki mantığı belirlemek için kullanılır Bir mantıksal işlecin işleminin sonucu, true veya false bir Boolean değeridir
   
-### Bitsel operatörler
+ Bitsel operatörler
   
 Bitsel operatörler, işlenenler üzerinde bit düzeyinde işlemler gerçekleştirmek için kullanılır. Operatörler önce bit düzeyine dönüştürülür ve ardından işlenenler üzerinde hesaplama yapılır. Daha hızlı işlem için bit düzeyinde toplama, çıkarma, çarpma vb. matematiksel işlemler yapılabilir. Örneğin, C veya C++'da & operatörü olarak temsil edilen bitsel AND , işlenen olarak iki sayı alır ve iki sayının her bitinde AND yapar. AND'nin sonucu yalnızca her iki bit de 1 ise 1'dir
   
-### Diğer operatörler: 
+Diğer operatörler: 
   
 Yukarıdaki operatörlerin dışında, bazı özel görevleri gerçekleştirmek için kullanılan C veya C++'da bulunan başka operatörler de vardır. Bazıları burada tartışılmaktadır: 
 a. sizeof operatörü : 
@@ -338,7 +338,7 @@ getline (cin, fullName);
 ## Math / Matematik
 C++, sayılar üzerinde matematiksel görevler gerçekleştirmenizi sağlayan birçok fonksiyona sahiptir.
 
-### C++ <cmath> Üstbilgisi
+ C++ <cmath> Üstbilgisi
 #include <cmath>
 sqrt(Kare kök), round(sayı yuvarlar) ve log (doğal logaritma) gibi diğer işlevler <cmath>başlık dosyasında bulunabilir:
 
@@ -372,7 +372,7 @@ Function                Tanım
     
    ## Conditions Koşullar/ Karar Yapıları
    
-If İfadeleri
+### If İfadeleri
 C++, matematikteki olağan mantıksal koşulları destekler:
 
 Daha az: a < b
@@ -430,7 +430,7 @@ Sözdizimi:
 
 değişken (koşul) =? ifade Doğru: ifade Yanlış;
 
-## C++ Switch ifadeleri
+### C++ Switch ifadeleri
 
 Yürütülecek birçok kod bloğundan birini seçmek için switchifadeyi kullanın.
 switch(expression) {
@@ -462,7 +462,9 @@ Bir kesme, anahtar bloğundaki kodun geri kalanının yürütülmesini "yok sayd
 
 Not: default anahtar sözcük, anahtardaki son ifade olarak kullanılmalıdır ve break gerekmez
 
-## while Döngüsü / While Loop
+## Loops / Döngüler
+
+### while Döngüsü / While Loop
 
 Döngüler, belirli bir koşula ulaşıldığı sürece bir kod bloğunu çalıştırabilir.
 
@@ -485,7 +487,7 @@ do {
 }
 while (condition);
 
-## C++ For Loop
+### For Loop
 
 Bir kod bloğunda kaç kez döngü yapmak istediğinizi tam olarak bildiğinizde, while döngüsü yerine for döngüsünü kullanın:
 
@@ -608,7 +610,8 @@ Bir işlevi çağırmak için işlevin adını ve ardından iki parantez () ve n
 
 Bir işlev birden çok kez çağrılabilir.
 
-### Parametreler ve Argümanlar
+
+ Parametreler ve Argümanlar
 Parametre olarak işlevlere bilgi aktarılabilir. Parametreler, işlevin içindeki değişkenler olarak işlev görür.
 
 Parametreler parantez içinde işlev adından sonra belirtilir. İstediğiniz kadar parametre ekleyebilir, bunları virgülle ayırmanız yeterlidir:
@@ -628,12 +631,12 @@ Dizileri bir işleve de iletebilirsiniz
 
 Parametre sayısı ve / veya türü farklı olduğu sürece birden çok işlev aynı ada sahip olabilir.
 
-### Özyineleme
+ Özyineleme
 Özyineleme, bir işlev çağrısının kendisini yapma tekniğidir. Bu teknik, karmaşık problemleri çözülmesi daha kolay olan basit problemlere ayırmanın bir yolunu sağlar.
 
 ## Classes /Sınıflar OOP
 
-### C ++ OOP nedir?
+C ++ OOP nedir?
 
 OOP Nesne Yönelimli Programlama anlamına gelir.
 
@@ -647,15 +650,17 @@ OOP, C ++ kodunun kuru kalmasına yardımcı olur "Kendinizi Tekrar Etmeyin" ve 
 OOP, daha az kod ve daha kısa geliştirme süresiyle tam yeniden kullanılabilir uygulamalar oluşturmayı mümkün kılar
 İpucu: "Kendini Tekrar Etme" (DRY) ilkesi, kodun tekrarını azaltmakla ilgilidir. Uygulama için ortak olan kodları ayıklamanız ve bunları tek bir yere yerleştirmeniz ve tekrarlamak yerine yeniden kullanmanız gerekir.
 
+
+
 C ++ Sınıflar ve Nesneler nelerdir?
+
 Sınıflar ve nesneler, nesne yönelimli programlamanın iki ana yönüdür.
 Yani, bir sınıf nesneler için bir şablondur ve bir nesne bir sınıfın örneğidir.
 
 Tek tek nesneler oluşturulduğunda, sınıftaki tüm değişkenleri ve işlevleri devralırlar.
 
 Bir sonraki bölümde sınıflar ve nesneler hakkında çok daha fazla bilgi edineceksiniz.
-
-### C ++ Sınıfları / Nesneleri
+ C ++ Sınıfları / Nesneleri
 C ++ nesne yönelimli bir programlama dilidir.
 
 C ++ 'daki her şey, nitelikleri ve yöntemleri ile birlikte sınıflar ve nesnelerle ilişkilendirilir. Örneğin: gerçek hayatta, bir araba bir nesnedir. Otomobilin ağırlık ve renk gibi özellikleri ve sürüş ve fren gibi yöntemleri vardır.
@@ -680,7 +685,8 @@ Public anahtar sözcüğü, sınıfın üyelerine (özniteliklerine ve yöntemle
 Sınıfın içinde bir tamsayı değişkeni myNum ve bir dize değişkeni myString vardır. Değişkenler bir sınıf içinde bildirildiğinde, öznitelikler olarak adlandırılır.
 Son olarak, sınıf tanımını noktalı virgülle sonlandırın ;.
 
-### Class Methods / Sınıf metod (Yöntemleri)
+
+Class Methods / Sınıf metod (Yöntemleri)
 
 Metodlar , sınıfa ait işlevlerdir.
 
@@ -695,7 +701,7 @@ Sınıf tanımının dışında bir işlev tanımlamak için, onu sınıfın iç
 
 Ayrıca parametreler ekleyebilirsiniz
 
-### constructors
+ constructors
 
 C ++ 'daki bir yapıcı, bir sınıfın nesnesi oluşturulduğunda otomatik olarak çağrılan özel bir yöntemdir.
 
@@ -713,14 +719,14 @@ public - üyelere sınıf dışından erişilebilir
 private -  üyelere sınıf dışından erişilemez (veya görüntülenemez)
 protected - üyelere sınıf dışından erişilemez, ancak devralınan sınıflarda erişilebilir. Daha sonra Miras hakkında daha fazla bilgi edineceksiniz.
 
-### Encapsulation Kapsülleme
+ Encapsulation Kapsülleme
 Kapsüllemenin anlamı, "hassas" verilerin kullanıcılardan gizlendiğinden emin olmaktır. Bunu başarmak için sınıf değişkenlerini / özniteliklerini özel olarak bildirmeniz gerekir (sınıfın dışından erişilemez). Başkalarının özel bir üyenin değerini okumasını veya değiştirmesini istiyorsanız, herkese açık get ve set yöntemleri sağlayabilirsiniz
 
 Neden Kapsülleme?
 Sınıf özniteliklerinizi özel olarak bildirmek iyi bir uygulama olarak kabul edilir (olabildiğince sık). Kapsülleme, verilerinizin daha iyi kontrolünü sağlar, çünkü siz (veya başkaları) kodun bir bölümünü diğer bölümleri etkilemeden değiştirebilirsiniz
 Artan veri güvenliği
 
-### Inheritance Miras
+ Inheritance Miras
 
 C ++ 'da öznitelikleri ve yöntemleri bir sınıftan diğerine devralmak mümkündür. "Miras kavramı" nı iki kategoriye ayırıyoruz:
 
@@ -734,7 +740,7 @@ Neden Ve Ne Zaman "Miras" Kullanılır?
 Bir sınıf, zaten başka bir sınıftan türetilmiş olan bir sınıftan da türetilebilir.
 Bir sınıf, virgülle ayrılmış bir liste kullanılarak birden fazla temel sınıftan da türetilebilir
 
-### Polimorfizm
+ Polimorfizm
 Polimorfizm "birçok form" anlamına gelir ve kalıtımla birbiriyle ilişkili birçok sınıfımız olduğunda ortaya çıkar.
 
 Önceki bölümde belirttiğimiz gibi; Devralma, öznitelikleri ve yöntemleri başka bir sınıftan devralmamızı sağlar. Polimorfizm, farklı görevleri gerçekleştirmek için bu yöntemleri kullanır. Bu, tek bir eylemi farklı şekillerde gerçekleştirmemizi sağlar.
@@ -795,7 +801,9 @@ C ++ kodu yürütülürken farklı hatalar oluşabilir: programcı tarafından y
 
 Bir hata oluştuğunda, C ++ normal olarak durur ve bir hata iletisi oluşturur. Bunun için teknik terim şudur: C ++ bir istisna atar (bir hata atar).
 
-### C++ try and catch
+
+
+C++ try and catch
 
 C ++ 'da istisna işleme üç anahtar kelimeden oluşur: try, throw ve catch:
 
