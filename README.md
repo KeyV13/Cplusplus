@@ -313,4 +313,31 @@ f.  &,* Şebeke:
 •	İşaretçi operatörü & bir değişkenin adresini döndürür. Örneğin &a; değişkenin gerçek adresini verecektir.
 •	İşaretçi operatörü *, bir değişkenin işaretçisidir. Örneğin *var; bir var değişkenine işaret eder. 
 
+## C++ Dizeleri String
+
+Dizeler metin depolamak için kullanılır.
+
+Bir stringdeğişken, çift tırnak içine alınmış bir karakter koleksiyonu içerir:
+Dizeleri kullanmak için kaynak koduna, <string>kitaplığa ek bir başlık dosyası eklemelisiniz
+
+Örnek
+Bir tür değişken oluşturun stringve ona bir değer atayın:
+
+#include <string>
+string greeting = "Hello";
+
+Operatör + , yeni bir dize oluşturmak üzere bunları bir araya getirmek için dizeler arasında kullanılabilir. Buna birleştirme denir.
+
+Bir dizenin uzunluğunu almak için şu length() işlevi kullanın
+
+Bir dizedeki karakterlere, köşeli parantez içindeki dizin numarasına bakarak erişebilirsiniz [].
+
+dizelerle çalışırken, genellikle getline() bir metin satırını okumak için işlevi kullanırız. cinİlk parametre olarak ve dize değişkenini ikinci olarak alır.
+getline (cin, fullName);
+
+## Math / Matematik
+C++, sayılar üzerinde matematiksel görevler gerçekleştirmenizi sağlayan birçok fonksiyona sahiptir.
+
+### C++ <cmath> Üstbilgisi
+sqrt(Kare kök), round(sayı yuvarlar) ve log (doğal logaritma) gibi diğer işlevler <cmath>başlık dosyasında bulunabilir:
 
