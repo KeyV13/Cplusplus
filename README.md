@@ -339,5 +339,530 @@ getline (cin, fullName);
 C++, sayılar üzerinde matematiksel görevler gerçekleştirmenizi sağlayan birçok fonksiyona sahiptir.
 
 ### C++ <cmath> Üstbilgisi
+#include <cmath>
 sqrt(Kare kök), round(sayı yuvarlar) ve log (doğal logaritma) gibi diğer işlevler <cmath>başlık dosyasında bulunabilir:
 
+Diğer popüler Matematik işlevlerinin bir listesi ( <cmath>kütüphaneden) aşağıdaki tabloda bulunabilir:
+
+Function                Tanım
+    
+    abs(x)              x'in mutlak değerini döndürür
+    acos(x)             x'in ark kosinini döndürür
+    asin(x)             x'in ark sinüsünü döndürür
+    atan(x)             x'in arctangent'ini döndürür
+    tcmb(x)             x'in küp kökünü döndürür
+    ceil(x)             en yakın tamsayıya yuvarlanmış x değerini döndürür
+    cos(x)              x'in kosinüsünü döndürür
+    cosh(x)             x'in hiperbolik kosinüsünü döndürür
+    exp(x)              e^x değerini döndürür
+    expm1(x)            e^x -1 değerini döndürür
+    fabs(x)             Kayan bir x'in mutlak değerini döndürür
+    fdım(x, y)          x ve y arasındaki pozitif farkı döndürür
+    floor(x)            en yakın tamsayıya yuvarlanmış x değerini döndürür
+    hipotenüs(x, y)     Ara taşma veya alt akış olmadan sqrt'yi (x2 + y2) döndürür
+    fma(x, y, z)        hassasiyeti kaybetmeden x * y + z değerini döndürür
+    fmax(x, y)          Kayan bir x ve y'nin en yüksek değerini döndürür
+    fmin(x, y)          Kayan bir x ve y'nin en düşük değerini döndürür
+    fmod (x, y)         x / y'nin kayan nokta kalanını döndürür
+    pow(x, y)           x değerini y'nin gücüne döndürür
+    sin(x)              x'in sinüsünü döndürür (x radyan cinsinden)
+    sinh(x)             bir çift değerin hiperbolik sinüsünü döndürür
+    tan(x)              Bir açının tanjantını döndürür
+    tanh(x)             bir çift değerin hiperbolik tanjantını döndürür 
+    
+   ## Conditions Koşullar/ Karar Yapıları
+   
+If İfadeleri
+C++, matematikteki olağan mantıksal koşulları destekler:
+
+Daha az: a < b
+Küçük veya eşit: a <= b
+Şundan büyüktür: a > b
+Büyük veya eşit: a >= b
+a == b'ye eşit
+Eşit Değil: a != b
+
+Farklı kararlar için farklı eylemler gerçekleştirmek için bu koşulları kullanabilirsiniz.
+
+C++ aşağıdaki koşullu ifadelere sahiptir:
+
+if Belirtilen koşul doğruysa yürütülecek kod bloğunu belirtmek için kullanın
+else Aynı koşul yanlışsa yürütülecek kod bloğunu belirtmek için kullanın
+else if İlk koşul yanlışsa, test edilecek yeni bir koşul belirtmek için kullanın .
+switch Yürütülecek birçok alternatif kod bloğu belirtmek için kullanın
+
+if Bildirimi
+Bir koşul true ise yürütülecek C++ kod bloğunu belirtmek için if ifadeyi kullanın
+if Küçük harflerle yazılmış olduğuna dikkat edin . Büyük harfler (If veya IF) bir hata üretecektir.
+
+Sözdizimi:
+if (koşul) {
+  // koşul doğruysa çalıştırılacak kod bloğu
+}
+
+Else İfadesi
+Koşul false ise yürütülecek kod bloğunu belirtmek için else deyimini kullanın.
+
+if (koşul) {
+  // koşul doğruysa çalıştırılacak kod bloğu
+} else
+koşul yanlışsa yürütülecek kod bloğu
+
+else if bildirimi
+
+İlk koşul false ise yeni bir koşul belirtmek için else if ifadeyi kullanın
+
+sözdizim:
+
+if (condition1) {
+  // koşul1 doğruysa yürütülecek kod bloğu
+} else if (koşul2) {
+  // koşul1 false ve koşul2 true ise yürütülecek kod bloğu
+} else {
+  // koşul1 yanlışsa ve koşul2 yanlışsa yürütülecek kod bloğu
+}
+
+
+Kısa El If...Else (Üçlü Operatör)
+Ayrıca, üç işlenenden oluştuğu için üçlü operatör olarak bilinen başka bir kısa el de vardır . Birden çok kod satırını tek bir satırla değiştirmek için kullanılabilir. Genellikle basit if else ifadelerini değiştirmek için kullanılır:
+
+Sözdizimi:
+
+değişken (koşul) =? ifade Doğru: ifade Yanlış;
+
+## C++ Switch ifadeleri
+
+Yürütülecek birçok kod bloğundan birini seçmek için switchifadeyi kullanın.
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+
+Bu nasıl çalışır:
+
+İfade switchbir kez değerlendirilir
+İfadenin değeri, her birinin değerleriyle karşılaştırılır.case
+Bir eşleşme varsa, ilgili kod bloğu yürütülür.
+ve anahtar sözcükleri isteğe bağlıdır breakve defaultbu bölümde daha sonra açıklanacaktır.
+
+Break Anahtar Sözcüğü
+C ++ bir break anahtar sözcüğüne ulaştığında, anahtar bloğundan ayrılır.
+
+Bu, bloğun içinde daha fazla kod ve vaka testinin yürütülmesini durduracaktır.
+
+Bir eşleşme bulunduğunda ve iş bittiğinde, mola zamanı. Daha fazla test için gerek yoktur.
+
+Bir kesme, anahtar bloğundaki kodun geri kalanının yürütülmesini "yok saydığı" için çok fazla yürütme süresi kazandırabilir.
+
+Not: default anahtar sözcük, anahtardaki son ifade olarak kullanılmalıdır ve break gerekmez
+
+## while Döngüsü / While Loop
+
+Döngüler, belirli bir koşula ulaşıldığı sürece bir kod bloğunu çalıştırabilir.
+
+Döngüler kullanışlıdır çünkü zamandan tasarruf sağlarlar, hataları azaltırlar ve kodu daha okunabilir hale getirirler.
+
+While döngüsü, belirtilen koşul doğru olduğu sürece bir kod bloğundan geçer:
+
+while (koşul) {
+  // yürütülecek kod bloğu
+}
+
+Not: Koşulda kullanılan değişkeni artırmayı unutmayın, aksi takdirde döngü asla bitmez!
+
+### Do/While Loop
+
+Do /while döngüsü, while döngüsünün bir çeşididir. Bu döngü, koşulun doğru olup olmadığını kontrol etmeden önce kod bloğunu bir kez yürütecek ve koşul doğru olduğu sürece döngüyü tekrarlayacaktır.
+
+do {
+  // yürütülecek kod bloğu
+}
+while (condition);
+
+## C++ For Loop
+
+Bir kod bloğunda kaç kez döngü yapmak istediğinizi tam olarak bildiğinizde, while döngüsü yerine for döngüsünü kullanın:
+
+Sözdizimi
+for (deyim 1; deyim 2; deyim 3) {
+  // yürütülecek kod bloğu
+}
+
+Deyim 1, kod bloğunun yürütülmesinden önce (bir kez) yürütülür.
+
+Deyim 2, kod bloğunu yürütme koşulunu tanımlar.
+
+Kod bloğu çalıştırıldıktan sonra deyim 3 (her seferinde) yürütülür
+
+
+Bu öğreticinin önceki bir bölümünde kullanılan break deyimini zaten gördünüz. Bir switch ifadesinden "atlamak" için kullanıldı.
+
+Break deyimi bir döngüden atlamak için de kullanılabilir.
+
+Continue deyimi, belirtilen bir koşul oluşursa bir yinelemeyi (döngüde) keser ve döngüdeki bir sonraki yinelemeye devam eder
+
+## C ++ Dizileri / Arrays
+Diziler, her bir değer için ayrı değişkenler bildirmek yerine, tek bir değişkende birden çok değeri depolamak için kullanılır.
+
+Bir dizi bildirmek için değişken türünü tanımlayın, dizinin adını ve ardından köşeli parantezleri belirtin ve saklaması gereken öğe sayısını belirtin:
+
+Köşeli parantez içindeki dizin numarasına [] başvurarak bir dizi öğesine erişirsiniz.
+
+Not: Dizi dizinleri 0 ile başlar: [0] ilk öğedir. [1] ikinci unsurdur, vb.
+
+Dizinin boyutunu belirtmeniz gerekmez. Ancak yapmazsanız, yalnızca içine eklenen öğeler kadar büyük olacaktır
+
+Bir dizinin boyutunu elde etmek için sizeof() operatörü kullanabilirsiniz
+
+Çok Boyutlu Diziler
+Çok boyutlu bir dizi, bir dizi dizisidir.
+
+Çok boyutlu bir diziyi bildirmek için, değişken türünü tanımlayın, dizinin adını ve ardından ana dizinin kaç öğeye sahip olduğunu belirten köşeli parantezleri ve ardından alt dizilerin kaç öğeye sahip olduğunu gösteren başka bir köşeli parantez kümesini belirtin. :
+
+string letters[2][4];
+Sıradan dizilerde olduğu gibi, bir dizi hazır bilgisiyle - küme parantezleri içinde virgülle ayrılmış bir listeyle değerler ekleyebilirsiniz. Çok boyutlu bir dizide, bir dizi değişmezindeki her öğe başka bir dizi değişmezidir.
+
+string letters[2][4] = {
+  { "A", "B", "C", "D" },
+  { "E", "F", "G", "H" }
+};
+
+## C++ Structures (struct)
+Struct (yapılar olarak da adlandırılır), ilgili birkaç değişkeni tek bir yerde gruplandırmanın bir yoludur. Yapıdaki her değişken, yapının bir üyesi olarak bilinir.
+
+Bir diziden farklı olarak, bir yapı birçok farklı veri türü (int, string, bool, vb.) İçerebilir.).
+
+Bir Yapı Oluştur
+Bir yapı oluşturmak için struct anahtar sözcüğünü kullanın ve üyelerinin her birini küme parantezleri içinde bildirin.
+
+Bildirimden sonra yapı değişkeninin adını belirtin (aşağıdaki örnekte Yapımım):
+
+struct {           // Yapı bildirimi
+  int myNum;       // Üye (int değişkeni)
+  string myString; // Üye (string değişkeni)
+}  yapim;          // Yapı değişkeni
+
+
+Bir yapının üyelerine erişmek için nokta sözdizimini (.):
+
+Birçok değişkende tek bir yapı kullanmak için virgül (,) kullanabilirsiniz:
+
+Yapıya bir ad vererek, bunu bir veri türü olarak değerlendirebilirsiniz. Bu, herhangi bir zamanda programın herhangi bir yerinde bu yapıya sahip değişkenler oluşturabileceğiniz anlamına gelir.
+
+## References
+Referans değişkeni, varolan bir değişkene "referans" dır ve & işleci ile oluşturulur:
+
+Önceki sayfadaki örnekte, & işleci bir başvuru değişkeni oluşturmak için kullanıldı. Ancak, değişkenin bilgisayarda depolandığı konum olan bir değişkenin bellek adresini almak için de kullanılabilir.
+
+C++'da bir değişken oluşturulduğunda, değişkene bir bellek adresi atanır. Ve değişkene bir değer atadığımızda, bu bellek adresinde saklanır.
+
+## pointer / işaretçi
+
+İşaretçi değişkeni, aynı türden bir veri türüne (int veya string gibi) işaret eder ve * işleciyle oluşturulur. Çalıştığınız değişkenin adresi işaretçiye atanır
+
+Örnek açıklandı
+Yıldız işareti * (string* ptr) kullanarak bir dize değişkenine işaret eden ptr adında bir işaretçi değişkeni oluşturun. İşaretçinin türünün, birlikte çalıştığınız değişkenin türüyle eşleşmesi gerektiğini unutmayın.
+
+Food adlı değişkenin bellek adresini saklamak için & işlecini kullanın ve işaretçiye atayın.
+
+Şimdi, ptr gıdanın hafıza adresinin değerini tutuyor.
+
+İpucu: İşaretçi değişkenlerini bildirmenin üç yolu vardır, ancak ilk yol tercih edilir:
+
+string* mystring; // Tercih edilen
+dize *mystring;
+dize * mystring;
+
+
+Önceki sayfadaki örnekte, bir değişkenin bellek adresini almak için işaretçi değişkenini kullandık (& referans operatörüyle birlikte kullanılır). Ancak, * işlecini (dereference işleci) kullanarak değişkenin değerini almak için işaretçiyi de kullanabilirsiniz.:
+işaretçinin değerini de değiştirebilirsiniz. Ancak bunun orijinal değişkenin değerini de değiştireceğini unutmayın
+
+
+## Functions / işlevler (fonksiyonlar)
+
+İşlev, yalnızca çağrıldığında çalışan bir kod bloğudur.
+
+Parametreler olarak bilinen verileri bir işleve geçirebilirsiniz.
+
+İşlevler belirli eylemleri gerçekleştirmek için kullanılır ve bunlar kodu yeniden kullanmak için önemlidir: Kodu bir kez tanımlayın ve birçok kez kullanın.
+
+void myFunction() {
+  // code to be executed
+}
+
+Örnek
+myFunction () işlevin adıdır
+void , işlevin bir dönüş değerine sahip olmadığı anlamına gelir. Bir sonraki bölümde dönüş değerleri hakkında daha fazla bilgi edineceksiniz
+işlevin (gövde) içine, işlevin ne yapması gerektiğini tanımlayan kod ekleyin
+
+Bir İşlevi Çağırma
+Bildirilen işlevler hemen yürütülmez. Bunlar "daha sonra kullanılmak üzere kaydedilir" ve çağrıldıklarında daha sonra çalıştırılırlar.
+
+Bir işlevi çağırmak için işlevin adını ve ardından iki parantez () ve noktalı virgül yazın.
+
+Bir işlev birden çok kez çağrılabilir.
+
+### Parametreler ve Argümanlar
+Parametre olarak işlevlere bilgi aktarılabilir. Parametreler, işlevin içindeki değişkenler olarak işlev görür.
+
+Parametreler parantez içinde işlev adından sonra belirtilir. İstediğiniz kadar parametre ekleyebilir, bunları virgülle ayırmanız yeterlidir:
+
+Varsayılan Parametre Değeri
+Eşittir işaretini (=) kullanarak varsayılan parametre değerini de kullanabilirsiniz.
+
+Çoklu Parametreler
+Fonksiyonun içine istediğiniz kadar parametre ekleyebilirsiniz.
+
+Dönüş Değerleri
+Önceki örneklerde kullanılan void anahtar sözcüğü, işlevin bir değer döndürmemesi gerektiğini belirtir. İşlevin bir değer döndürmesini istiyorsanız, bir veri türü (int, string vb.) Kullanabilirsiniz.) void yerine işlevin içindeki return anahtar sözcüğünü kullanın.
+
+Referansa Göre Geç
+Önceki sayfadaki örneklerde, parametreleri bir işleve geçirdiğimizde normal değişkenler kullandık. İşleve bir başvuru da iletebilirsiniz. Bağımsız değişkenlerin değerini değiştirmeniz gerektiğinde bu yararlı olabilir.
+Dizileri bir işleve de iletebilirsiniz
+
+Parametre sayısı ve / veya türü farklı olduğu sürece birden çok işlev aynı ada sahip olabilir.
+
+### Özyineleme
+Özyineleme, bir işlev çağrısının kendisini yapma tekniğidir. Bu teknik, karmaşık problemleri çözülmesi daha kolay olan basit problemlere ayırmanın bir yolunu sağlar.
+
+## Classes /Sınıflar OOP
+
+### C ++ OOP nedir?
+
+OOP Nesne Yönelimli Programlama anlamına gelir.
+
+Prosedürel programlama, veri üzerinde işlem yapan yordamları veya işlevleri yazmakla ilgiliyken, nesne yönelimli programlama, hem veri hem de işlevleri içeren nesneler oluşturmakla ilgilidir.
+
+Nesne yönelimli programlamanın prosedürel programlamaya göre birçok avantajı vardır:
+
+OOP daha hızlı ve daha kolay yürütülür
+OOP, programlar için net bir yapı sağlar
+OOP, C ++ kodunun kuru kalmasına yardımcı olur "Kendinizi Tekrar Etmeyin" ve kodun bakımını, değiştirilmesini ve hata ayıklanmasını kolaylaştırır
+OOP, daha az kod ve daha kısa geliştirme süresiyle tam yeniden kullanılabilir uygulamalar oluşturmayı mümkün kılar
+İpucu: "Kendini Tekrar Etme" (DRY) ilkesi, kodun tekrarını azaltmakla ilgilidir. Uygulama için ortak olan kodları ayıklamanız ve bunları tek bir yere yerleştirmeniz ve tekrarlamak yerine yeniden kullanmanız gerekir.
+
+C ++ Sınıflar ve Nesneler nelerdir?
+Sınıflar ve nesneler, nesne yönelimli programlamanın iki ana yönüdür.
+Yani, bir sınıf nesneler için bir şablondur ve bir nesne bir sınıfın örneğidir.
+
+Tek tek nesneler oluşturulduğunda, sınıftaki tüm değişkenleri ve işlevleri devralırlar.
+
+Bir sonraki bölümde sınıflar ve nesneler hakkında çok daha fazla bilgi edineceksiniz.
+
+### C ++ Sınıfları / Nesneleri
+C ++ nesne yönelimli bir programlama dilidir.
+
+C ++ 'daki her şey, nitelikleri ve yöntemleri ile birlikte sınıflar ve nesnelerle ilişkilendirilir. Örneğin: gerçek hayatta, bir araba bir nesnedir. Otomobilin ağırlık ve renk gibi özellikleri ve sürüş ve fren gibi yöntemleri vardır.
+
+Öznitelikler ve yöntemler temel olarak sınıfa ait değişkenler ve işlevlerdir. Bunlara genellikle "sınıf üyeleri" denir.
+
+Sınıf, programımızda kullanabileceğimiz kullanıcı tanımlı bir veri türüdür ve nesne oluşturucu veya nesne oluşturmak için bir "plan" olarak çalışır.
+
+Örnek
+"MyClass" adlı bir sınıf oluşturun:
+
+class MyClass {      // sınıf
+  public:            // Erişim belirticisi
+    int myNum;       // Öznitelik (int değişkeni)
+    string myString; // Öznitelik (dize değişkeni)
+};
+
+Örnek açıklaması:
+
+Class anahtar sözcüğü MyClass adlı bir sınıf oluşturmak için kullanılır.
+Public anahtar sözcüğü, sınıfın üyelerine (özniteliklerine ve yöntemlerine) sınıfın dışından erişilebileceğini belirten bir erişim belirticisidir. Daha sonra erişim belirticileri hakkında daha fazla bilgi edineceksiniz.
+Sınıfın içinde bir tamsayı değişkeni myNum ve bir dize değişkeni myString vardır. Değişkenler bir sınıf içinde bildirildiğinde, öznitelikler olarak adlandırılır.
+Son olarak, sınıf tanımını noktalı virgülle sonlandırın ;.
+
+### Class Methods / Sınıf metod (Yöntemleri)
+
+Metodlar , sınıfa ait işlevlerdir.
+
+Bir sınıfa ait işlevleri tanımlamanın iki yolu vardır:
+
+Sınıf tanımı içinde
+Dış sınıf tanımı
+
+Not: Özniteliklere eriştiğiniz gibi yöntemlere erişirsiniz; sınıfın bir nesnesini oluşturarak ve nokta sözdizimini kullanarak (.)
+
+Sınıf tanımının dışında bir işlev tanımlamak için, onu sınıfın içinde bildirmeniz ve ardından sınıfın dışında tanımlamanız gerekir. Bu, sınıfın adını, ardından kapsam çözümlemesi :: işlecini ve ardından işlevin adını belirterek yapılır:
+
+Ayrıca parametreler ekleyebilirsiniz
+
+### constructors
+
+C ++ 'daki bir yapıcı, bir sınıfın nesnesi oluşturulduğunda otomatik olarak çağrılan özel bir yöntemdir.
+
+Bir yapıcı oluşturmak için sınıfla aynı adı ve ardından parantez () kullanın.
+Not: Yapıcı sınıfla aynı ada sahiptir, her zaman herkese açıktır ve herhangi bir dönüş değeri yoktur.
+
+Yapıcı(Constructors ) Parametreleri
+Kurucular, özniteliklerin başlangıç değerlerini ayarlamak için yararlı olabilecek parametreleri (normal işlevler gibi) de alabilir.
+
+Fonksiyonlar gibi, kurucular da sınıfın dışında tanımlanabilir. Önce sınıfın içindeki yapıcıyı bildirin ve ardından sınıfın adını, ardından kapsam çözümlemesi :: işlecini ve ardından yapıcının adını (sınıfla aynı olan) belirterek sınıfın dışında tanımlayın
+
+C ++ 'da üç erişim belirticisi vardır:
+
+public - üyelere sınıf dışından erişilebilir
+private -  üyelere sınıf dışından erişilemez (veya görüntülenemez)
+protected - üyelere sınıf dışından erişilemez, ancak devralınan sınıflarda erişilebilir. Daha sonra Miras hakkında daha fazla bilgi edineceksiniz.
+
+### Encapsulation Kapsülleme
+Kapsüllemenin anlamı, "hassas" verilerin kullanıcılardan gizlendiğinden emin olmaktır. Bunu başarmak için sınıf değişkenlerini / özniteliklerini özel olarak bildirmeniz gerekir (sınıfın dışından erişilemez). Başkalarının özel bir üyenin değerini okumasını veya değiştirmesini istiyorsanız, herkese açık get ve set yöntemleri sağlayabilirsiniz
+
+Neden Kapsülleme?
+Sınıf özniteliklerinizi özel olarak bildirmek iyi bir uygulama olarak kabul edilir (olabildiğince sık). Kapsülleme, verilerinizin daha iyi kontrolünü sağlar, çünkü siz (veya başkaları) kodun bir bölümünü diğer bölümleri etkilemeden değiştirebilirsiniz
+Artan veri güvenliği
+
+### Inheritance Miras
+
+C ++ 'da öznitelikleri ve yöntemleri bir sınıftan diğerine devralmak mümkündür. "Miras kavramı" nı iki kategoriye ayırıyoruz:
+
+*derived class (child) Türkçesi:  türetilmiş sınıf (alt) - başka bir sınıftan devralan sınıf
+*base class (parent) Türkçesi: temel sınıf (üst sınıf) - devralınan sınıf
+Bir sınıftan devralmak için : sembolünü kullanın.
+
+Neden Ve Ne Zaman "Miras" Kullanılır?
+- Kod yeniden kullanılabilirliği için kullanışlıdır: yeni bir sınıf oluşturduğunuzda varolan bir sınıfın özniteliklerini ve yöntemlerini yeniden kullanın.
+
+Bir sınıf, zaten başka bir sınıftan türetilmiş olan bir sınıftan da türetilebilir.
+Bir sınıf, virgülle ayrılmış bir liste kullanılarak birden fazla temel sınıftan da türetilebilir
+
+### Polimorfizm
+Polimorfizm "birçok form" anlamına gelir ve kalıtımla birbiriyle ilişkili birçok sınıfımız olduğunda ortaya çıkar.
+
+Önceki bölümde belirttiğimiz gibi; Devralma, öznitelikleri ve yöntemleri başka bir sınıftan devralmamızı sağlar. Polimorfizm, farklı görevleri gerçekleştirmek için bu yöntemleri kullanır. Bu, tek bir eylemi farklı şekillerde gerçekleştirmemizi sağlar.
+
+## C ++ Dosyaları File
+Fstream kitaplığı dosyalarla çalışmamızı sağlar.
+
+Fstream kitaplığını kullanmak için hem standart <iostream> hem de <fstream> üstbilgi dosyasını ekleyin:
+
+Örnek
+#include <iostream>
+#include <fstream>
+
+dosyaları oluşturmak, yazmak veya okumak için kullanılan fstream kitaplığına dahil edilen üç sınıf şunlardır:
+ofstream - Dosyaları oluşturur ve yazar
+ifstream - Dosyalardan okur
+fstream - Ofstream ve ifstream birleşimi: dosyalar oluşturur, okur ve yazar
+
+
+Bir Dosya Oluşturma ve Yazma
+Bir dosya oluşturmak için ofstream veya fstream sınıfını kullanın ve dosyanın adını belirtin.
+
+Dosyaya yazmak için ekleme işlecini (<<) kullanın.
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+  // Metin dosyası oluşturma ve açma
+  ofstream MyFile("filename.txt");
+
+  // Dosyaya yaz
+  MyFile << "Files can be tricky, but it is fun enough!";
+
+  // Dosyayı kapat
+  MyFile.close();
+}
+
+Dosyayı neden kapatıyoruz?
+İyi bir uygulama olarak kabul edilir ve gereksiz bellek alanını temizleyebilir.
+
+Dosya Okuma
+Bir dosyadan okumak için ofstream veya fstream sınıfını ve dosyanın adını kullanın.
+
+Dosyayı satır satır okumak ve dosyanın içeriğini yazdırmak için getline() işleviyle (ifstream sınıfına ait) birlikte bir while döngüsü de kullandığımızı unutmayın:
+
+string myText;  // Metin dosyasının çıktısını almak için kullanılan bir metin dizesi oluşturma
+
+ifstream MyReadFile("filename.txt"); // Metin dosyasından okuma
+while (getline (MyReadFile, myText)) { // Dosyayı satır satır okumak için getline() işleviyle birlikte bir while döngüsü kullanın
+  cout << myText;       // Dosyadan metin çıkışı
+}
+MyReadFile.close();
+
+## C ++ İstisnaları Exceptions
+C ++ kodu yürütülürken farklı hatalar oluşabilir: programcı tarafından yapılan kodlama hataları, yanlış girişten kaynaklanan hatalar veya öngörülemeyen diğer şeyler.
+
+Bir hata oluştuğunda, C ++ normal olarak durur ve bir hata iletisi oluşturur. Bunun için teknik terim şudur: C ++ bir istisna atar (bir hata atar).
+
+### C++ try and catch
+
+C ++ 'da istisna işleme üç anahtar kelimeden oluşur: try, throw ve catch:
+
+Try deyimi, yürütülürken hatalar için sınanacak bir kod bloğu tanımlamanıza olanak tanır.
+
+Throw anahtar sözcüğü, bir sorun algılandığında özel bir hata oluşturmamızı sağlayan bir istisna atar.
+
+Catch deyimi, try bloğunda bir hata oluşursa yürütülecek kod bloğunu tanımlamanıza olanak tanır.
+
+Dene ve yakala anahtar kelimeleri çiftler halinde gelir:
+
+try {
+  // Denenecek kod bloğu
+  throw exception;  // Bir sorun ortaya çıktığında bir istisna atın
+}
+catch () {
+  // Hataları işlemek için kod bloğu
+}
+
+Aşağıdaki örneği göz önünde bulundurun:
+
+Örnek
+try {
+  int yaş = 15;
+  if (yaş > = 18) {
+    cout << "Erişim izni verildi - yeterince yaşlısın.";
+  } else {
+    throwe (yaş);
+  }
+}
+catch (int myNum) {
+  cout << "Erişim reddedildi - En az 18 yaşında olmalısınız.\ve";
+  cout << "Yaş: " << myNum;
+}
+
+Örnek açıklamsı:
+Bazı kodları test etmek için try bloğunu kullanırız: Yaş değişkeni 18'den küçükse, bir istisna atar ve bunu catch bloğumuzda ele alırız.
+
+Yakalama bloğunda hatayı yakalar ve bu konuda bir şeyler yaparız. Catch deyimi bir parametre alır: örneğimizde, age değerini çıkarmak için bir int değişkeni (myNum) kullanırız (çünkü try bloğunda (age) int türünde bir istisna atıyoruz).
+
+Herhangi bir hata oluşmazsa (örneğin, 15 yerine 20 yaşındaysa, yani 18'den büyük olacaksa), yakalama bloğu atlanır:
+int age = 20;
+Düzenleme amacıyla özel bir hata numarası / kodu gibi bir referans numarası çıkarmak için throw anahtar sözcüğünü de kullanabilirsiniz:
+try {
+  int age = 15;
+  if (age >= 18) {
+    cout << "Access granted - you are old enough.";
+  } else {
+    throw 505;
+  }
+}
+catch (int myNum) {
+  cout << "Access denied - You must be at least 18 years old.\n";
+  cout << "Error number: " << myNum;
+}
+
+İstisnalar Her Türlü işlemek (...)
+Try bloğunda kullanılan atma türünü bilmiyorsanız, "üç nokta" sözdizimini kullanabilirsiniz (...) her türlü istisnayı idare edecek catch bloğunun içinde:
+
+try {
+  int age = 15;
+  if (age >= 18) {
+    cout << "Access granted - you are old enough.";
+  } else {
+    throw 505;
+  }
+}
+catch (...) {
+  cout << "Access denied - You must be at least 18 years old.\n";
+}
